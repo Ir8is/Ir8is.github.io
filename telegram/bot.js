@@ -24,6 +24,7 @@ bot.on("message", async (ctx) => {
   
   try {
     const data = JSON.parse(ctx.message.web_app_data.data);
+    console.log(data);
     ctx.reply(
       `🎉 Вы ${data.userName} набрали ${data.score} из ${data.total} правильных ответов!`,
       Markup.keyboard([
