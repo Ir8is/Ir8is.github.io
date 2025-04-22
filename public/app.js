@@ -18,12 +18,6 @@ function initApp() {
     Telegram.WebApp.expand();
     userData = Telegram.WebApp.initDataUnsafe?.user || {};
     applyColorScheme(Telegram.WebApp.colorScheme === "dark");
-
-    if (userData.username) {
-      document.querySelector(
-        "h1"
-      ).textContent = `Привет, ${userData.username}! Добро пожаловать в викторину!`;
-    }
   } else {
     applyColorScheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
   }
@@ -87,7 +81,7 @@ function showFinalResults(score, total) {
       JSON.stringify({
         score: score,
         total: total,
-        userId: Telegram.WebApp.initDataUnsafe.user?.id,
+        userName: "Егор"
       })
     );
     setTimeout(() => Telegram.WebApp.close(), 1000);
