@@ -81,7 +81,6 @@ function showFinalResults(score, total) {
       JSON.stringify({
         score: score,
         total: total,
-        userName: "Егор"
       })
     );
     setTimeout(() => Telegram.WebApp.close(), 1000);

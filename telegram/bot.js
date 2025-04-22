@@ -26,7 +26,7 @@ bot.on("message", async (ctx) => {
     const data = JSON.parse(ctx.message.web_app_data.data);
     console.log(data);
     ctx.reply(
-      `🎉 Вы ${data.userName} набрали ${data.score} из ${data.total} правильных ответов!`,
+      `🎉 Вы набрали ${data.score} из ${data.total} правильных ответов!`,
       Markup.keyboard([
         Markup.button.webApp("Начать викторину", process.env.WEBAPP_URL),
       ])
